@@ -110,3 +110,79 @@ comparision operator
 == -- equal
 != -- not equal
 -----------------------
+
+week 3: Conditional statement
+----------------------
+- use if statement
+
+if condition:
+    // do something here //
+elif other condition:
+    // do something here //
+else:
+    // do something here //
+
+
+- ternary operator: put everything in one line
+format: statement + if condition + else + statement
+example, print("a equal b") if a == b else print("a is not equal to b")
+
+- logical operation: use to combine statement: 
+and 
+or 
+not (and)
+== 
+!= 
+
+- pass: if for any reason you have to leave one empty, you can do it by puttin in the pass statement
+(just like when prof give code to write and put pass)
+example, def abc():
+            pass
+
+- for loops: use for iteraeting over a sequence or any object that is iterable (that is either a list, a tuple, a dictionary, a set, or a string)
+example,
+for x in "python":
+    print(x)
+    <!-- it going to print each character in "python" -->
+
+- range
+example,
+1. for i in range(5):
+    print(i) <!-- print 0 until 4-->
+
+2. for i in range(0,4,1):
+    print(i) <!-- same as above but its java style-->
+
+- break statement: use to jump out of a loop for perfrmance reasons.
+example,
+name = ["smith", "joe", "jonh", "jack"]
+for i in name:
+    if i == "joe":
+        print("{i} is founded")
+        break
+else:
+    print("name not founded")
+
+
+- continue statement: stop the current iteraction of the loop, and continue with the next
+example,
+for i in range(10):
+if i == 5:
+    continue
+print(i)
+<!-- its going to print number from 0 to 10 except 5 -->
+
+
+- while loop: execute a set of statement as long as condition is ture.
+example, 
+i = 1
+while i > 6:
+    print()
+    i += 1
+ *** remember to increment or decrement or it will be an infinite loop
+
+- len(list([1,2,3,4,5])) 
+<!-- will display: 5 as it is the length of the list -->
+
+- for loop inside for loop: used to iterate 2 lists like a matrix
+
