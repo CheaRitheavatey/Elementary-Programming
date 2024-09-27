@@ -95,4 +95,22 @@ def fizz_buzz(input):
     else: 
         return input
 
-print(fizz_buzz(90))
+# print(fizz_buzz(90))
+
+
+# exercise 4
+def removeN(str,num):
+    return(str[num:])
+
+# print(removeN("python",2))
+
+
+# exercise 5
+def same(parameter):
+    for i in range(0,len(parameter)):
+        if parameter[0] != parameter[-1]:
+            return False
+    else:
+        return True
+
+print(same([1,2,3,1]))
