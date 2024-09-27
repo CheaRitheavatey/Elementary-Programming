@@ -113,4 +113,49 @@ def same(parameter):
     else:
         return True
 
-print(same([1,2,3,1]))
+# print(same([1,2,3,1]))
+
+
+def prime(number):
+    newlist = []
+    divisor = 2
+    while number > 1:
+        while number % divisor == 0:
+            newlist.append(divisor)
+            number = number // divisor
+        divisor += 1
+    return newlist
+
+# print(prime(70))
+
+
+def get_cofactor(matrix, i, j):
+    return [row[:j] + row[j+1:] for row in (matrix[:i] + matrix[i+1:])]
+
+def matrix1(matrix):
+    # Base case for 2x2 matrix
+    if len(matrix) == 2:
+        return matrix[0][0] * matrix[1][1] - matrix[1][0] * matrix[0][1]
+
+    det = 0
+    for c in range(len(matrix)):
+        det += ((-1) ** c) * matrix[0][c] * matrix(get_cofactor(matrix, 0, c))
+    return det
+
+# Test cases
+matrix_2x2 = [[4, 6], [3, 8]]
+matrix_3x3 = [[6, 1, 1], [4, -2, 5], [2, 8, 7]]
+
+# print(matrix(matrix_2x2))  # Output: 14
+# print(matrix(matrix_3x3))  # Output: -306
+
+import numpy as np
+
+def matrix(matrix):
+    return np.linalg.det(matrix)
+
+array = np.array([[6, 1, 1], [4, -2, 5], [2, 8, 7]])
+print(matrix(array))
+
+
+    
