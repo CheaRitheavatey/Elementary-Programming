@@ -185,4 +185,61 @@ while i > 6:
 <!-- will display: 5 as it is the length of the list -->
 
 - for loop inside for loop: used to iterate 2 lists like a matrix
+---------------------------------
+
+week 4: function
+---------------------------------
+def functionName(parameter):
+
+- to call function:
+functionName(parameter)
+
+example,
+def functionName(age): # this age is a parameter
+    print(f"You are {age} years old")
+
+functionName(12) # 12 that passed in is an argument
+
+- for arbitary argument: use * when we dont know how many argument users going to passed in
+def arbitary(*parameter):
+
+example, 
+def getList(*objectList):
+    return objectList
+
+print(getList(1,2,3,"hi","hello",1.4))
+// the arugment passed will be stored in tuple
+
+example,
+
+def getUser(*name):
+    for i in name:
+        print(i)
+
+getUser("joe", "jonh", "jack")
+
+-> output:
+joe
+jonh
+jack
+// not a tuple anymore if we use for loop to print
+
+- arbitrary keyword argument (**keywordArgument): use when we dont know how many information they going to passed in and the return type: dictionary
+example,
+def save_user(**user):
+    return(user)
+
+print(save_user(id=123,name="joe"),job="abc")
+
+- local variable: accessible within function scope
+- global variable: accessible within file scope
+- but we can assign local into global as well by using "global" keyword
+- example,
+
+// global variable
+message = 'global variable'
+def send():
+    message1 = 'local variable'
+    global message = 'local variable turn into global variable when we use global keyword'
+    print(message)
 
