@@ -155,7 +155,31 @@ def matrix(matrix):
     return np.linalg.det(matrix)
 
 array = np.array([[6, 1, 1], [4, -2, 5], [2, 8, 7]])
-print(matrix(array))
+# print(matrix(array))
 
 
-    
+def plusMinus(arr):
+    postive = 0
+    negative = 0
+    zero = 0
+    total = len(arr)
+    for i in arr:
+        if i > 0:
+            postive+= 1
+        elif i < 0:
+            negative+=1
+        else:
+            zero +=1
+    postiveRatio = postive/total
+    negativeRatio = negative/total
+    zeroRatio = zero/total
+
+    formattedP = f"{postiveRatio:.6f}"
+    formattedN = f"{negativeRatio:.6f}"
+    formatted0 = f"{zeroRatio:.6f}"
+
+    return formattedP, formattedN, formatted0
+
+print(plusMinus([1,-1,0,-1,1]))
+
+
