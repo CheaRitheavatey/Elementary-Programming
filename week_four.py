@@ -180,6 +180,45 @@ def plusMinus(arr):
 
     return formattedP, formattedN, formatted0
 
-print(plusMinus([1,-1,0,-1,1]))
+# print(plusMinus([1,-1,0,-1,1]))
 
 
+# home practice
+
+# exercise 1 palindrome checker: check if a given string is a palindrome (read the saem forwards and backward)
+def palindrome(str):
+    str = str.lower().replace(" ", "")
+    return str == str[::-1]
+
+# print(palindrome("aba"))
+
+
+# exercise 2: fibonacci sequence: write a function that return the nth fibonacci number
+def fibonacci(n):
+    # base case
+    if n == 1:
+        return 0
+    elif n == 2:
+        return 1
+    
+    return fibonacci(n-2) + (fibonacci(n-1))
+
+print(fibonacci(4))
+
+# exercise 3 check for prime number
+def primeChecker(num):
+    if num <= 1:
+        return False
+    
+    # loop over possible divisor to check if num is diviible by any of them
+    for i in range(2, int(num**0.5) +1):
+        if num % i == 0:
+            return False
+    return True
+
+# exercise 4: write a function that check if two string are anagrams of each other
+def anagram(str1, str2):
+    # convert them into lowercase and store them in a sorted list using sorted() functino
+    return sorted(str1.lower()) == sorted(str2.lower())
+
+# sorted("listen") results in ['e', 'i', 'l', 'n', 's', 't']
