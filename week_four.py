@@ -204,7 +204,7 @@ def fibonacci(n):
     
     return fibonacci(n-2) + (fibonacci(n-1))
 
-print(fibonacci(4))
+# print(fibonacci(4))
 
 # exercise 3 check for prime number
 def primeChecker(num):
@@ -216,6 +216,8 @@ def primeChecker(num):
         if num % i == 0:
             return False
     return True
+# print(primeChecker(3))
+
 
 # exercise 4: write a function that check if two string are anagrams of each other
 def anagram(str1, str2):

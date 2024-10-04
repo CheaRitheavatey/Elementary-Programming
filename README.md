@@ -286,15 +286,57 @@ week 5: collection
             example, 
             num = (1,2,3,4) # a tuple
             colorList.extend(num)
-    
         - .pop(): remove the last item if you dont pass an argument, but if you pass index it will remove item in   that index
 
         - .remove(element): remove that element
         - .clear(): remove all element inside list only empty list remain
-    
-    
+
+        - comprehension list:
+            newList = [expression for item in iterable if condition == True]
+
+            we can write that instead of for loop they both are the same
+
+        - .sort(): sort list alphabetically or in ascending order
+        - .reverse(): reverse the list from back to front
+        - .copy(): copy the list
+            example,
+            b = [1,7,4,5,0,3,2,7,0]
+            b.sort(reverse=True)
+            print(b)
+        - .count(element inside list): count how many element inside that list exist
+            example,  b = [1,7,4,5,0,3,2,7,0]
+            b.count(7) -> output: 2 because it exists 2 times
+
     
     - tuple: ordered, unchangable, allow duplicate member
+        - similar to list its just that its unchangeable (immutable) 
+        - can convert to list and modify and use the functions and methods of list and then convert it back to tuple
 
     - set: unordered unablechange no duplicate member unindexed
+        example, aSet = {1,3,4,5}
+        - create a set: aSet = set({1,2,3,4})
+        - .add(value): just like append() it is just for set its just for set its not ordered so the new value will be anywhere in set
+        - .update(element): add list, another set, or tuple in a set
+        - .remove(element): delete an element inside set but will raise error if the element you want to remove doesnt exist
+        - .discard(element): same as .remove() but will not raise an error
+        - .pop(): dont need argument but will remove element randomly
+        - .clear(): remove all element inside set and will have empty set remain    
+
+
     - dictionary: ordered changeable no duplicate memebr
+        - stored data in key:value pairs
+        example, dict = {
+            'name': "joe",
+            'age': 10
+        }
+
+        - len(dict): print out how many item inside the dictionary
+        example, len(dict) -> output: 2
+        - .get(): same as dict[key]
+        - .keys(): return all the key in dict
+        - .values(): return all the value in dict
+        - .items(): return in item in dict as a tuple
+        - .update(): 
+
+        - del: keyword for delete collection completely will have nothing not even empty list or dict or set or tuple...
+            example, del dictName
