@@ -183,7 +183,8 @@ def plusMinus(arr):
 # print(plusMinus([1,-1,0,-1,1]))
 
 
-# home practice
+
+# home practice start 
 
 # exercise 1 palindrome checker: check if a given string is a palindrome (read the saem forwards and backward)
 def palindrome(str):
@@ -222,3 +223,5 @@ def anagram(str1, str2):
     return sorted(str1.lower()) == sorted(str2.lower())
 
 # sorted("listen") results in ['e', 'i', 'l', 'n', 's', 't']
+
+# home practice end

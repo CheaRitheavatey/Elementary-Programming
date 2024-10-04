@@ -243,3 +243,58 @@ def send():
     global message = 'local variable turn into global variable when we use global keyword'
     print(message)
 
+-----------------------------
+week 5: collection
+----------------------------
+- there are 4 build-in data types in python used to store collectoins of data:
+    
+    - lists: ordered, changeable, allow duplicate member
+        - example, colorList = ['green', 'blue', 'yellow']
+        - first index: colorList[0]
+        - last index: colorList[-1]
+
+        - if you dont specify the new element where you want to add, it will add at the end of list
+
+        - len(list): determine the length of the list
+        - newList = list(('a','b','c')): create a new list
+
+        - access a range of indexes:
+        example, colorList = ['green', 'blue', 'yellow']
+        colorList[1:2] -> print out the second and third elements
+        colorLList[:] -> print out all elements
+        colorList[:1] -> print out first and until index 2
+        colorList[1:] -> print out from index 1 until the end
+
+        - check if element in list:
+        if 'yellow' in colorList:
+            return True
+
+        - change range of items value:
+            example, 
+            colorList = ['green', 'blue', 'yellow']
+            colorList[1:2] = ['orange', 'white']
+            print(colorList) -> output: ['green', 'orange', 'white']
+        
+        - .insert(index, newElement): insert new element in specific index. the exisiting element in that index will not be replace but move to the next index
+            example, num = [1,2,3,4]
+            num.insert(0,'a') -> output: ['a',1,2,3,4]
+
+        - .append(newElement): add new element at the last index of the list
+            example, num.append(100) -> output: [1,2,3,4,100]
+        
+        - .extend(): add iterable object into another list
+            example, 
+            num = (1,2,3,4) # a tuple
+            colorList.extend(num)
+    
+        - .pop(): remove the last item if you dont pass an argument, but if you pass index it will remove item in   that index
+
+        - .remove(element): remove that element
+        - .clear(): remove all element inside list only empty list remain
+    
+    
+    
+    - tuple: ordered, unchangable, allow duplicate member
+
+    - set: unordered unablechange no duplicate member unindexed
+    - dictionary: ordered changeable no duplicate memebr
