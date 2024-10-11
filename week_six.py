@@ -158,11 +158,10 @@ def practice5():
             weight = float(weight)
             height = float(height)
             
-            bmi = (weight/height)
+            bmi = round((weight/height),2)
         except ValueError as e:
             print(e)
-        except TypeError:
-            print(e)
+
         else:
             print(f"bmi: {bmi}")
             if  18.5 < bmi < 24.9:
