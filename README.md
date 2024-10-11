@@ -340,3 +340,71 @@ week 5: collection
 
         - del: keyword for delete collection completely will have nothing not even empty list or dict or set or tuple...
             example, del dictName
+
+-------------------------------------
+week 6: Exception
+------------------------------------
+
+- error detected during execution are called "exception"
+- there are different type of exception
+- to handle exeception:
+    use try and except block
+
+    - try block let you test a block of code for errors or tell teh program to do sth in that block that may cause the error
+    - except block let you handle that error that may arise
+    - else block let you execute code when there is no error.
+    - finally block let you execute code, regardless of the result of the try and except block. (this will be executed no matter what)
+        ex. close a file, it doesnt matter if the program cause error or not you want to close a file
+
+    - raise statement allow the programmer to force a specific exeception to occur. 
+
+    - if an exception occurs during execution of the try clause, the rest of the clause will be skip, then exception clause will be raise and then finally clause will execute
+
+    try:
+        <body>
+    except <ExceptionType 1>:
+        <handler>
+    ...
+    except <ExceptionType N>:
+        <handlerN>
+    finally:
+        <process_finally> will execute to matter what
+
+
+    - we can also write this way if we want to use a lot of exception:
+
+    except(TypeError, ZeroDivisionError)
+
+    - all exception inherit from BaseException so if we dont know what exception we will get we can use BaseException
+
+    - can also write this way:
+
+    try:
+        <>
+    except BaseException as err:
+    print("unexpceted {err}, type(err) =")
+
+Exception Hierarchy:
+
+BaseException:
+    SystemExit
+    KeyboardInterrupt
+    Exception
+        StopIteration
+        StopAsyncIteration
+        ArithmeticError
+            FloatingPointError
+            ConnectionAbortedError
+            ConnectionRefusedError
+            ConnectionRoseError
+        FileExistsError
+        FileNotFoundError
+        InterruptedError
+
+    OSError: this exception is raise when a system fucntion returns a system related error
+    TypeError: raise wehn an operation or function is applied to an object of inappropriate type. ex try to concatinate int and str
+    SyntaxError: when you write sth wrong
+    RuntimeError: error occur during runtime like zero division error. ex 1/0 is in runtime error
+    NameError: when local or global name is not found
+    FileExistError: when you want to create a file that already exist
+    ValueError occurs when a function is called with the proper argument type but with the wrong value. 
