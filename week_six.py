@@ -7,21 +7,6 @@ def testTryExcept():
     except:
         print("second except") # should use specific type of error in the first and more general below
 
-# testTryExcept()
-
-def testExeception():
-    try:
-        number1, number2, = eval(input("Enter two numbers, separated by a comma: "))
-        result = number1 / number2
-        print("Result: ", result)
-    except ZeroDivisionError:
-        print("division by 0")
-    except SyntaxError:
-        print("a comma may be missing")
-    except:
-        print("something is wrong with the input")
-    finally:
-        print("finally clause executed")
 
 # testExeception()
 
@@ -76,4 +61,47 @@ def practice2():
             break
 
 # concatenate is different from upcast and downcast
-practice2()
+# practice2()
+
+# testTryExcept()
+
+def testExeception():
+    try:
+        number1, number2, = eval(input("Enter two numbers, separated by a comma: "))
+        result = number1 / number2
+        print("Result: ", result)
+    except ZeroDivisionError:
+        print("division by 0")
+    except SyntaxError:
+        print("a comma may be missing")
+    except:
+        print("something is wrong with the input")
+    finally:
+        print("finally clause executed")
+
+# testExeception()
+
+# practice
+def divide():
+    while True:
+        try:
+            a = input("enter number x: ")
+            b = input("enter numebr y: ")
+            a = float(a)
+            b = float(b)
+            print(f"result of x/y: {a/b}")
+        except ValueError as e:
+            print("one or both of the input is not numberic value")
+        except ZeroDivisionError as e:
+            print("y cannot be 0")
+        
+        else:
+            # this will executed only if try block executed successfully
+            again = input("want to enter again? (y/n): ")
+            if again.lower() != "y":
+                break
+        # finally:
+            # this is will executed no matter what
+            # print("program exited! ")
+
+divide()
