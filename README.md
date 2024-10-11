@@ -408,3 +408,7 @@ BaseException:
     NameError: when local or global name is not found
     FileExistError: when you want to create a file that already exist
     ValueError occurs when a function is called with the proper argument type but with the wrong value. 
+
+- raise an exception (usually in a function)
+- try to use the function
+- Handle the exception

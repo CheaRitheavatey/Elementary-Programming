@@ -81,7 +81,7 @@ def testExeception():
 
 # testExeception()
 
-# practice
+# practice 3
 def divide():
     while True:
         try:
@@ -104,4 +104,76 @@ def divide():
             # this is will executed no matter what
             # print("program exited! ")
 
-divide()
+# divide()
+
+# raise Exception
+# usually we use raise exception in funciton and when we try to use that function we put it in try block
+def practice4():
+    try:
+        num = input("enter number: ")
+        num = int(num)
+        if num<0:
+            raise TypeError("positive integer only")
+    except TypeError as e:
+        print(type(e))
+
+# practice4()
+
+# practice 5
+
+def practice5():
+    day = {
+    'one': 'monday',
+    'two': 'tuesday',
+    'three': 'wednesday',
+    'four': 'thursday',
+    'five': 'friday',
+    'six': 'saturday',
+    'seven': 'sunday'
+    }
+    
+    while True: 
+        try:
+            user = input("enter number as text from one-seven: ")
+            user = user.lower()
+            print("day of the week is: ", day[user])
+        except KeyError as e:
+            print("enter from one-seven")
+        else:    
+            again = input("want to enter again? (y/n): ")
+            if again.lower() != 'y':
+                break
+    
+# practice5()
+
+# practice 6: bmi calculation
+# bmi()
+
+def practice5():
+    while True:
+        try:
+            weight = input("enter weight (kg): ")
+            height = input("enter height (m): ")
+            
+            weight = float(weight)
+            height = float(height)
+            
+            bmi = (weight/height)
+        except ValueError as e:
+            print(e)
+        except TypeError:
+            print(e)
+        else:
+            print(f"bmi: {bmi}")
+            if  18.5 < bmi < 24.9:
+                print(f"{bmi} is within the healthy range")
+            elif bmi > 25:
+                print( f"{bmi} is in the overweight range")
+            else:
+                print( f"{bmi} is within the underweight range")
+
+            again = input("want to enter again? (y/n): ")
+            if again != 'y':
+                break
+
+practice5()
