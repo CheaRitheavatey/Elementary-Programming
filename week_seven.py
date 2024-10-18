@@ -74,15 +74,16 @@ cat = Cat("titi","blue",1)
 # cat.sound()
 
 # print(cat)
-'''
+
 class Jaguar(Animal):
-    def __init__(self, name, age):
-        super().__init__(name, age, color="black")
+    def __init__(self, name ,age):
+        super().__init__(name, color="black", age=age)
         
 
 jaguar = Jaguar("jak",4)
+# jaguar.color = "white"
+print(jaguar)
 
-'''
 
 from math import pi
 from math import pow
@@ -119,5 +120,37 @@ class Food:
         return f"food name: {self.name} \ncalories: {self.calories} \ngetKcal method:{self.getKcal()}"
     
 
-food = Food("abc",10000)
-print(food)
+class Vegetable(Food):
+    def __init__(self, name, calories=0):
+        super().__init__(name, calories)
+
+    def getKcal(self):
+        return super().getKcal() + 10
+
+vegetable = Vegetable("carrot")
+vegetable.calories = 200
+print(vegetable)
+
+# practice
+class Bank:
+    # constructor
+    def __init__(self,name,accountNumber,balance,):
+        self.name = name
+        self.accountNumber = accountNumber
+        self.balance = balance
+    # methods
+    def withdraw(self,withdrawAmount):
+        if withdrawAmount > self.balance or self.balance == 0:
+            return "not enough balance to withdraw"
+        else:
+            self.balance = self.balance - withdrawAmount
+            return f": withdraw amount: {withdrawAmount}\ntotal balance: {self.balance}"
+    
+    def deposit(self,depositAmount):
+        self.balance += depositAmount
+        return f"depoist: {depositAmount}\ntotal balance: {self.balance}"
+    
+bank = Bank("abc",1,1200)
+print(bank.deposit(200))
+print(bank.withdraw(4000))
+

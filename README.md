@@ -454,3 +454,11 @@ week 7: OOP
     example, 
     import module_name
     module_name.name_of_the_method
+
+    __main__ is set to __main__ when rand directly
+    __name__ is set to file name when ran indrectly as a module
+
+    if __name__ == "__main__":
+        account.deposit(3000000)
+    else:
+        print("invalid")
