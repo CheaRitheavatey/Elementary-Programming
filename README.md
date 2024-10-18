@@ -412,3 +412,40 @@ BaseException:
 - raise an exception (usually in a function)
 - try to use the function
 - Handle the exception
+
+---------------------------------------
+week 7: OOP
+---------------------------------------
+
+- python is an object oriented programming
+- class = is like an object constructor or a blueprint for creating an object
+- object = will have properties and method
+- class keyword for creating class
+- self parameter is a reference to the current instand of the class
+
+- create an instance or object of the class
+    x = MyClass()
+    x.draw() # as draw is one of the method in class name MyClass
+
+- can also create a new variable, or propterty outside like this:
+
+    class MyClass:
+        x = 1
+        def move(self):
+            print("move")
+
+    x = MyClass()
+    x.m = 20 # the property m does not exist in the class name MyClass but we can add a new one like this
+    print(x.m) # the output will be 20
+
+- constructor: get called everythime we create an object
+- __init__() always executed when the class is being initaiated
+- use __init__() fuction to assign values to object properties or other operations that are necessary to do when the object is being created
+
+- del keyword: specify something you want to delete
+
+- INHERITANCE: allow us to define class that inherits all the modthods and properties from another class
+    - parent class is the class being inherited from
+    - child class is the class that inherit from another class
+
+    - super() put this inside the child class constrcutor so that child class will inherit the property inside
