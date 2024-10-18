@@ -175,4 +175,15 @@ def practice5():
             if again != 'y':
                 break
 
-practice5()
+# practice5()
+
+# testing for import class
+# import week_seven
+# week_seven.Animal
+# print(dir(practice1)) print attribute of an object
+
+# import week_four as wf # this can create alias of the module meaning we can just call wf cuz it is shorter
+# from math import pi # this import pi only and dont have to import the whole module
+
+from random import randint
+# print(randint(1,10))

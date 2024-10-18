@@ -449,3 +449,8 @@ week 7: OOP
     - child class is the class that inherit from another class
 
     - super() put this inside the child class constrcutor so that child class will inherit the property inside
+
+    - use import to import class from different file.
+    example, 
+    import module_name
+    module_name.name_of_the_method
