@@ -104,7 +104,7 @@ def divide():
             # this is will executed no matter what
             # print("program exited! ")
 
-# divide()
+divide()
 
 # raise Exception
 # usually we use raise exception in funciton and when we try to use that function we put it in try block

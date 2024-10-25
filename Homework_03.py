@@ -35,7 +35,7 @@ class Parallelepiped(Rectangle):
 
 
 # Example usage
-if name == "__main__":
+if __name__ == "__main__":
     rect = Rectangle(4, 5)
     rect.display()
     
