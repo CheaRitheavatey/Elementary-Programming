@@ -78,5 +78,58 @@ def task5(add,list):
 
     return list
 
-print(task5(2,[1,2,3]))
+# print(task5(2,[1,2,3]))
+
+# task 6: write code in one line:
+age= 0
+# print("adult") if age > 18 else print("teenager") if age >= 13 else print("child")
+
+# task 7: create a function and ask the user to enter an hour between 0-23
+def task7():
+    hours = {
+        range(4,11): 'morning',
+        range(11,16): 'noon',
+        range(16,20): 'evening',
+        range(20,24): 'night',
+        range(0,4): 'past midnight' 
+    }
+    try:
+        user = input("Enter an hour between 0-23: ")
+        user = int(user)
+
+        for i in hours.keys():
+            if user in i:
+                return hours[i]
+        else:
+            print("invalid")
+
+    
+    except ValueError as e:
+        print(e)
+    
+# print(task7())
+        
+
+# task 8: create a book class with title anuthor and isbn properites. create the apporriate construcotr and string representative
+class Book:
+    def __init__(self, title, author, isbn, genre=None):
+        self.title = title
+        self.author = author
+        self.isbn = isbn
+        self.genre = genre
+        # self.dict = dict
+
+    
+    def __str__(self):
+        genreInfo = f"\nGenre: {self.genre}" if self.genre else ''
+
+        return f"Titile: {self.title} \nAuthor: {self.author} \nISBN: {self.isbn}{genreInfo}"
+    
+    # def addBook(self, title, author, isbn):
+    #     self.dict.update({title:author})
+    
+book = Book("abc", "xyz", 11111111111,"00")
+print(book)
+
+
     
