@@ -129,7 +129,20 @@ class Book:
     #     self.dict.update({title:author})
     
 book = Book("abc", "xyz", 11111111111,"00")
-print(book)
+# print(book)
+
+
+def lowest_product(num):
+    if len(str(num)) > 4:
+        new = [int(i) for i in str(num)]
+        new.sort()
+        return new[0] * new[1] * new[2] * new[3]
+    else:
+        return "Number is too small"
+
+
+
+print(lowest_product(1234111532))
 
 
     
