@@ -6,7 +6,7 @@ def task1():
     newlist = ['!' if i % 5== 0 and i !=0 else i for i in range(25)] #teacher code
     return newlist
 
-# print(task1())
+print(task1())
 
 # task 2: divide first by second number and also show the  remainder also handle error
 def task2():
@@ -142,7 +142,7 @@ def lowest_product(num):
 
 
 
-print(lowest_product(1234111532))
+print(lowest_product(123))
 
 
     

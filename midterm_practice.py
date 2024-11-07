@@ -103,7 +103,7 @@ def exercise2():
     #         i = i**2
     #         newlist.append(i)
     return newlist
-print(exercise2())
+# print(exercise2())
 
 """
 task 3: create a function that asks the user to enter a minute value between 0-59.
@@ -183,23 +183,23 @@ collection.add_movie("Inception", "Chirstopher",2001)
 collection.add_movie("Mommy", "Joe",2008)
 
 # show movies
-print("current movie: \n")
-print(collection.show_movies())
+# print("current movie: \n")
+# print(collection.show_movies())
 
 # count movies
-print(collection.count_movie())
+# print(collection.count_movie())
 
 # find movie
-print(collection.find_movie("Mommy"))
-print(collection.find_movie("Mermaid"))
+# print(collection.find_movie("Mommy"))
+# print(collection.find_movie("Mermaid"))
 
 # remove movie
-print(collection.remove_movie("Inception"))
-print(collection.remove_movie("Matrix"))
+# print(collection.remove_movie("Inception"))
+# print(collection.remove_movie("Matrix"))
 
 # show movie after remove
-print('Update movie collection')
-print(collection.show_movies())
+# print('Update movie collection')
+# print(collection.show_movies())
 
 
 """
@@ -215,5 +215,109 @@ def exercise5(number):
         if number % i == 0:
             return False
     return True
-print(exercise5(11))
-print(exercise5(20))
+# print(exercise5(11))
+# print(exercise5(20))
+
+# task 1: temperature converter
+def convertTemperature(celsius,fahrenheit):
+    try:
+        afterCelsius = (celsius * 9/5) + 32
+        afterFahrenheit = (fahrenheit - 32) * 5/9
+
+        return f"{celsius} to Fahrenheit: {afterCelsius}\n{fahrenheit} to Celsius: {afterFahrenheit}"
+    except ValueError:
+        print("Cannot be string")
+
+# print(convertTemperature(0,32))
+
+
+newList = ['!' if i % 5 == 0 and i != 0 else i for i in range(25) ]
+
+# print(newList)
+
+def a():
+    while True:
+        try:
+            x = input("Enter first number: ")
+            y = input("Enter second number: ")
+
+            x = int(x)
+            y = int(y)
+
+            z = x // y
+            w = x % y
+            
+            return( f"{x}/{y} = {z} with remainder {w}")
+        except ValueError:
+            print( "input integer try again")
+        except ZeroDivisionError:
+            print( "second number cannot be zero")
+        else:
+            again = input("do you want to enter again? (y/n): ")
+            if again.lower() != 'y':
+                break
+
+# print(a())
+         
+#  return the shorest word in string
+def shortestword(words):
+    current = ''
+    shortestwords = None
+
+    for char in words:
+        if char == ' ' or char == '_' or char == '-':
+            if current:
+                if shortestwords is None or len(shortestwords) > len(current):
+                    shortestwords= current
+            current = ''
+        else:
+            current += char
+    
+    return shortestwords
+
+# print(shortestword('aaaaaaaaaaa_aaa f ad fsdiufsdfj sdf-d'))
+
+def frequency(string):
+    dict = {}
+    for char in string:
+        if char not in dict:
+            dict[char] = 1
+        else:
+            dict[char] += 1
+    return dict
+
+# print(frequency("aaabbccc"))
+
+def elemet(add,list):
+    list.insert(0,add)
+    list.pop()
+    return list
+# print(elemet('a',[1,2,3]))
+
+
+age = 0
+# print('adult') if age > 25 else print('teenager') if 25 > age > 18 else print('child')
+
+def seven():
+    hours = {
+        range(4,11): 'morning',
+        range(11,16): 'noon',
+        range(16,20): 'evening',
+        range(20,24): 'night',
+        range(0,4): 'past midnight' 
+    }
+
+    try:
+        user = input("Enter number between 1-24: ")
+        user = int(user)
+
+        for i in hours.keys():
+            if user in i:
+                return hours[i] 
+        else:
+            print("Invlid")
+    except ValueError:
+        print("invalid")
+
+
+print(seven())
