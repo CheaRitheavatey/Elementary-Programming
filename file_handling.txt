@@ -1,4 +1,5 @@
 time complexity
 1. problem: time complexity => what is the time complexity of the algo (give equations) 
-2. show code or descirption of algo and tell the time complexity- recursion problem 
+2. show code or descirption of algo and tell the time complexity
+- recursion problem 
 1. give description and ask to write code in recursion (want to see the base case and the recursion steps) fib, triangular number

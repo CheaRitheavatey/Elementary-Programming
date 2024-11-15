@@ -483,5 +483,20 @@ week 9: file handling
     - methods:
         - .read(): read content of the file it return the whole text
         - .readline(): read the content but one line at a time return one line at a time
-        - .close(): close file do this especially when you want to change the mode
+        - .readlines(): will put each line in a list
+        - .close(): close file do this especially when you want to change the 
+        
+        - os.remove("filename"): to remove file but first you have to remove file
+            example, 
+            import os
+            myfile = open("filename.txt")
+            os.remove("filename.txt")
+            and then run
+
+        - os.path.exists("filename"): return boolean if the file exist or not can  be use in condition to check if the file exist
+        
+        - os.rmdir("folder name"): remove folder if folder empty but if the directory or file is not empty then it will show an error
+
+        - os.mkdir("folder name"): create a new folder
+
     
