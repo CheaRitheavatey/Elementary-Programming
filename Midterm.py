@@ -1,5 +1,34 @@
 import math
 
+def count_words_and_vowels():
+    try:
+        input_string = input("Please enter a string: ").strip()  # Get user input and remove leading/trailing spaces
+
+        # Check if the input is empty
+        if not input_string:
+            raise ValueError("Input cannot be empty.")  # Raise an exception if the input is empty
+
+        # Count words
+        words = input_string.split()
+        word_count = len(words)
+
+        # Count vowels
+        vowels = "aeiouAEIOU"
+        vowel_count = sum(1 for char in input_string if char in vowels)
+
+        return word_count, vowel_count
+
+    except ValueError as e:
+        return str(e)  # Return the error message
+
+# Example usage
+result = count_words_and_vowels()
+if isinstance(result, tuple):
+    word_count, vowel_count = result
+    print(f"Word count: {word_count}, Vowel count: {vowel_count}")
+else:
+    print(result)  # Print the error message
+    
 # task 1:
 class Product:
     def __init__(self, name, price, stock):
