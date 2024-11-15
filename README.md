@@ -462,3 +462,26 @@ week 7: OOP
         account.deposit(3000000)
     else:
         print("invalid")
+
+-------------------------------------------------
+week 9: file handling
+-------------------------------------------------
+
+- open() is the key function for working with files in python
+    file that can be used here is text or
+    - mode:
+        - 'r' = reading text mode
+        - 'w' = writing (truncating the file if it already exist)
+        - 'x' = creating and writing to new file
+        - 'a' = appending (when you want to keep the content inside and want to write more inside)
+
+        - 'b' = binary mode
+        - 't' = text mode (default)
+
+    - file going to raise an error when file doesnt exist and you try to open it
+
+    - methods:
+        - .read(): read content of the file it return the whole text
+        - .readline(): read the content but one line at a time return one line at a time
+        - .close(): close file do this especially when you want to change the mode
+    
