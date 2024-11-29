@@ -15,7 +15,8 @@ class MyGui:
         self.check = tk.Checkbutton(self.root,text='Show message on another frame',variable=self.checkstate)
         self.check.pack(padx=10,pady=10)
 
-        self.button = tk.Button(self.root, text='button',command=self.showMessage)
+        self.button = tk.Button(self.root, text='button',command=self.showMessage, activebackground='pink')
+        # active background is changing the color of the button when press
         self.button.pack()
 
         # button to clear the content inside textbox
