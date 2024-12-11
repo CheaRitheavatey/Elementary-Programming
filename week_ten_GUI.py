@@ -36,7 +36,7 @@ class MyGui:
         self.smallmenu.add_separator()
         self.smallmenu.add_command(label='close A',command=exit)
         
-        # another small menu inside big menu bar
+        # another small menu inside big menu bar 
         self.action = tk.Menu(self.menubar,tearoff=0)
         self.action.add_command(label='Show message',command=self.showMessage)
 
