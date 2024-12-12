@@ -41,7 +41,7 @@ def res1():
             a = int(a)
             b = int(b)
 
-            if (a not in range(1,4)) and (b not in range(4,6)):
+            if (a in range(1,4)) and (b in range(4,6)):
                 randlist = [randint(a,b) for i in range(5)]
                 print("random list: ",randlist)
                 randlistupdate = []
