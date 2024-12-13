@@ -101,5 +101,4 @@ def task2():
                     f"{i} {'-'*i} \\ {'skier' if i == randlistupdate[x] else ''} "
                     )
                 
-
 task2()
