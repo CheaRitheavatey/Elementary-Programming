@@ -10,7 +10,7 @@ def add_subject(subjects, subject_name, department, hours):
 
     # Create a subject dictionary
     subject_info = {
-        'subject_name': subject_name,
+        'subject_name': subject_name, 
         'department': department,
         'hours': hours
     }
@@ -27,7 +27,7 @@ try:
 except ValueError as e:
     print(e)
 
-add_subject(subjects, 'Elementary Programming', 'Ínformatics' ,50 )
+# add_subject(subjects, 'Elementary Programming', 'Ínformatics' ,50 )
     
 # exercise 2
 def check_for_errors_in_file(file_path):
@@ -44,10 +44,7 @@ def check_for_errors_in_file(file_path):
         print(f"An unexpected error occurred: {e}")
 
 # Example usage
-file_path = 'your_file.txt'  # Change this to your file path
-check_for_errors_in_file(file_path)
-
-check_for_errors_in_file('log.txt')
+# check_for_errors_in_file('log.txt')
 # exercise 3
 class exercise3:
     def __init__(self):
@@ -83,3 +80,4 @@ class exercise3:
         except ValueError:
             messagebox.showwarning(title="Warning", message="Please enter a number")
 # exercise3()
+
