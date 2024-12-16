@@ -499,4 +499,6 @@ week 9: file handling
 
         - os.mkdir("folder name"): create a new folder
 
-    
+-----------------------------------------------
+week 10: practice 3, practice 1, week 12, 
+-----------------------------------------------
