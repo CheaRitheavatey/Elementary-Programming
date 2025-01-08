@@ -1,3 +1,19 @@
+def atomic_number(electrons):
+    shellnum = 1
+    list = []
+    remain = electrons
+    while remain > 0:
+        formula = 2* (shellnum**2)
+        if remain >= formula:
+            list.append(formula)
+            remain -= formula
+        else:
+            list.append(remain)
+            remain =0
+        shellnum +=1
+    return list
+print(atomic_number(11))
+
 # We are given a (big big) array a of n numbers (n>0 assumed).
 # example
 # sum_of_products([12,13]) = 12 + 13 + 12*13 = 181
