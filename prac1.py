@@ -28,11 +28,25 @@ print(new_draws1)
 # keep fruits of length 6
 new_fruit = [fruit for fruit in fruits if len(fruit) >= 6]
 print(new_fruit)
+import random
+for _ in range(3):
+    numberrr = random.sample(range(1,9),5)
+    print(' '.join(str(i) for i in numberrr))
 
-# lottery simulation
-# import random
-# def draw_lottery_number(filename='winning_number.txt', n=1000):
-#     with open(filename, 'a') as lotto:
-#         for i in range(n):
-#             nums = random.sample(range(1,91),5)
-#             print(" ".join(str(n) for n in nums), file=lotto)
+# exercise 2 lottery simulation
+def draw_lottery_numbers(filename='winning_number.txt', n=100):
+    with open(filename, 'a') as l:
+        for _ in range(n):
+            number = random.sample(range(1,91),5)
+            print(' '.join(str(i) for i in number), file=l)
+                
+lst = []
+from collections import Counter
+def count_frequencies(filename='winning_number.txt'):
+    with open(filename, 'r') as l:
+        for i in l:
+            item = i.split()
+            lst.extend(item)
+    counter = Counter(lst)
+    print(counter.most_common())
+        
