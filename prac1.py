@@ -50,3 +50,71 @@ def count_frequencies(filename='winning_number.txt'):
     counter = Counter(lst)
     print(counter.most_common())
         
+# immutable object = int float string tuple bool
+# mutable object = list dict set 
+a = [1,2]
+b = a[:]
+a.append(3)
+print(a)
+print(b)
+
+c = 5
+f = c
+c +=3
+print(f)
+print(c)
+
+# unpacking
+nums = [1,2,3,4,5]
+a, *middle, b = nums
+print(a)      # 1
+print(middle) # [2,3,4]
+print(b)      # 5
+
+
+pairs = [(1,2), (3,4), (5,6)]
+for x, y in pairs:
+    print(x,y)
+    
+    
+d = {"a":1, "b":2}
+
+for key, value in d.items():
+    print(key, value)
+    
+    
+a = [1,2,3]
+b = a
+b[0] = 100
+print(a)
+
+
+def add_student(students):
+    students.append("Alice")
+    return students
+
+classroom = ["Tom", "Emma"]
+new_classroom = add_student(classroom[:])
+
+print(classroom)
+print(new_classroom)
+
+x = (1,2,3)
+y = x
+x = x + (4,)
+print(y)
+
+def min_max(numbers):
+    return min(numbers), max(numbers)
+
+smallest, largest = min_max([10,2,1,3,4])
+print(smallest, largest)
+
+students = [
+    ("Tom", 20),
+    ("Anna", 22),
+    ("Sam", 19)
+]
+for i in students:
+    name, age = i
+    print(f"{name} is {age} years old")
