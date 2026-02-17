@@ -172,39 +172,28 @@ print(a.values())
 # write a function that accept any number and any type of parameter use the unpacking
 # if the function receives a dictionary calculate the average of the values
 # if the passed parameter contain non-numeric element convert to 0
-my_data = {"key": "value"}
-if isinstance(my_data, dict):
-    print("It's a dictionary!")
 
-# def func4(*args, **kwargs):
-#     # thought process: 
-#     # goal: only want number to calculate average
-#     # store num in list -> calculate average
-#     result = []
-#     for i in args:
-#         if isinstance()
-        
-# def flexible_average(*args, **kwargs):
-#     values = []
-#     # Process positional args
-#     for arg in args:
-#         if isinstance(arg, dict):
-#             for v in arg.values():
-#                 try:
-#                     values.append(float(v))
-#                 except (ValueError, TypeError):
-#                     values.append(0.0)
-#         else:
-#             try:
-#                 values.append(float(arg))
-#             except (ValueError, TypeError):
-#                 values.append(0.0)
-#     # Process keyword args values
-#     for v in kwargs.values():
-#         try:
-#             values.append(float(v))
-#         except (ValueError, TypeError):
-#             values.append(0.0)
-#     return sum(values) / len(values) if values else 0.0
+def func4(*args):
+    result = 0
+    length = 0
 
-# print(flexible_average({"a": 10, "b": 20, "c": "x"}))
+    # If exactly one argument and it's a dictionary
+    if len(args) == 1 and isinstance(args[0], dict):
+        for value in args[0].values():
+            if isinstance(value, (int, float)):
+                result += value
+            else:
+                result += 0
+            length += 1
+
+    # Otherwise treat as normal unpacked arguments
+    else:
+        for value in args:
+            if isinstance(value, (int, float)):
+                result += value
+            else:
+                result += 0
+            length += 1
+
+    return result / length if length > 0 else 0
+print(func4({"a": 10, "b": 20, "c": "x"}))

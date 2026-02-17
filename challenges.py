@@ -2,7 +2,6 @@
 # write a function that accept any number and any type of parameter use the unpacking
 # if the function receives a dictionary calculate the average of the values
 # if the passed parameter contain non-numeric element convert to 0
-
 def func4(*args, **kwargs):
     # thought process: goal is to take all the num and give average
     # store all num in one place and set other to 0
