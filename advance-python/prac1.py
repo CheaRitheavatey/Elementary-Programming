@@ -118,3 +118,21 @@ students = [
 for i in students:
     name, age = i
     print(f"{name} is {age} years old")
+    
+    
+import math
+records = [
+    ("Tom", [80, 90]),
+    ("Anna", [70, 85]),
+]
+(tom, (a,b)), (anna, (c,d)) = records
+
+print(f"{tom} average: {(a+b)/2}") 
+print(f"{anna} average: {(c+d)/2}") 
+
+for name, (s1,s2) in records:
+    print(f"{name} average: {(s1+s2)/2}")
+# print(name)
+# print(name, average)
+
+# print(f"{name} average: {sum((n)/n) for n in average}")
