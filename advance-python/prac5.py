@@ -148,3 +148,9 @@ def say_hello():
 say_hello()
 say_hello()
 say_hello()
+
+
+"""
+closure = function remember outer variable
+decorator = function that wrap another function
+"""
