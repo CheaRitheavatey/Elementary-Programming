@@ -23,10 +23,10 @@ def is_prime(n):
     return True
 
 # generator
-def prime_generator():
+def prime_generator(limit):
     num = 3
     yield 2
-    while True:
+    while num < limit:
         if is_prime(num):
             yield num
         num+= 2
