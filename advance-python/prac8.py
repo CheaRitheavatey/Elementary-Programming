@@ -232,3 +232,27 @@ except NumberError as e:
 
         
 
+
+class Increasing:
+    def __set__(self, instance, value):
+        if not isinstance(value, (int, float)):
+            raise TypeError("must be int/float")
+        current = instance.__dict__.get("number")
+        if current is None or value > current:
+            instance.__dict__["number"] = value
+        else:
+            raise ValueError("new value must be greater than previous value")
+
+class Number:
+    number = Increasing()
+    def __init__(self, initial):
+        self.number = initial
+# demo
+n = Number(5)
+print(n.number)   # 5
+n.number = 8      # OK
+print(n.number)   # 8
+try:
+    n.number = 3  # ValueError
+except ValueError as e:
+    print("error:", e)
